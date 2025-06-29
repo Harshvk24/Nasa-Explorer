@@ -19,10 +19,24 @@ Features :
 * Media Search – Search NASA's image and video archive
 
 ---
+File structure :
+nasa-explorer/
+├── backend/
+│   ├── routes/
+│   ├── services/
+│   └── index.js
+├── frontend/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── assets/
+│   │   ├── App.js
+│   │   └── ...
+├── README.md
 
+---
 Getting Started :
 
-# Prerequisites
+Prerequisites
 
 * Node.js ≥ 16
 * npm
@@ -37,7 +51,7 @@ git clone https://github.com/your-username/nasa-explorer.git
 cd nasa-explorer
 
 
-# 1. Setup Backend
+1. Setup Backend
 
 cd backend
 npm install
@@ -45,17 +59,17 @@ npm install
 # NASA_API_KEY= your_key_here
 
 npm start
-# Runs on http://localhost:5000
+Runs on http://localhost:5000
 
 
-# 2. Setup Frontend
+2. Setup Frontend
 
 cd ../frontend
 npm install
 
 
 npm start
-# Runs on http://localhost:3000
+Runs on http://localhost:3000
 
 
 ---
