@@ -21,16 +21,27 @@ Features :
 ---
 File structure :
 nasa-explorer/
+
 ├── backend/
+
 │   ├── routes/
+
 │   ├── services/
+
 │   └── index.js
+
 ├── frontend/
+
 │   ├── src/
+
 │   │   ├── components/
+
 │   │   ├── assets/
+
 │   │   ├── App.js
+
 │   │   └── ...
+
 ├── README.md
 
 ---
