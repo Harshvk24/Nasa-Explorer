@@ -12,7 +12,7 @@ const MarsViewer = () => {
   useEffect(() => {
     const fetchWeather = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/mars/weather`);
+        const res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/mars/weather`);
         setWeather(res.data);
       } catch (err) {
         console.error("Failed to fetch weather", err);

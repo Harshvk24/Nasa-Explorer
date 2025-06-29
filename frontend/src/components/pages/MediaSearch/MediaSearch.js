@@ -19,7 +19,7 @@ const MediaSearch = () => {
     setLoading(true);
     setError("");
     try {
-      const res = await axios.get(`http://localhost:5000/search?q=${trimmed}`);
+      const res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/search?q=${trimmed}`);
       const items = res.data.collection?.items || [];
       setResults(items);
 

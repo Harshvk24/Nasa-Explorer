@@ -12,7 +12,7 @@ const ApodViewer = () => {
     setLoading(true);
     setError(null);
     try {
-      const res = await axios.get(`http://localhost:5000/apod`, {
+      const res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/apod`, {
         params: selectedDate ? { date: selectedDate } : {},
       });
       setData(res.data);

@@ -13,7 +13,7 @@ const NeoViewer = () => {
     setLoading(true);
     setError(null);
     try {
-      const res = await axios.get(`http://localhost:5000/neo?start_date=${targetDate}&end_date=${targetDate}`);
+      const res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/neo?start_date=${targetDate}&end_date=${targetDate}`);
       setData(res.data);
     } catch (err) {
       console.error("NEO fetch failed:", err);
