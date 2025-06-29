@@ -76,6 +76,8 @@ Installation :
 2. Setup Frontend
 
 * cd ../frontend
+* Create a .env file and add:
+* REACT_APP_BACKEND_URL=http://localhost:5000
 * npm install
 
 
