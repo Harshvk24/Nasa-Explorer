@@ -14,7 +14,7 @@ const EpicViewer = () => {
       setError(null);
 
       try {
-        const res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}:5000`);
+        const res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/epic`);
         setImages(res.data || []);
       } catch (err) {
         console.error("EPIC fetch failed:", err);
