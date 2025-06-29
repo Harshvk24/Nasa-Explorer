@@ -58,29 +58,29 @@ Prerequisites
 Installation :
 
 
-git clone https://github.com/your-username/nasa-explorer.git
-cd nasa-explorer
+* git clone https://github.com/your-username/nasa-explorer.git
+* cd nasa-explorer
 
 
 1. Setup Backend
 
-cd backend
-npm install
-Create a .env file and add:
-NASA_API_KEY= your_key_here
+* cd backend
+* npm install
+* Create a .env file and add:
+* NASA_API_KEY= your_key_here
 
-npm start
-Runs on http://localhost:5000
+* npm start
+* Runs on http://localhost:5000
 
 
 2. Setup Frontend
 
-cd ../frontend
-npm install
+* cd ../frontend
+* npm install
 
 
-npm start
-Runs on http://localhost:3000
+* npm start
+* Runs on http://localhost:3000
 
 
 ---
