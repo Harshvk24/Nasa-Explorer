@@ -1,0 +1,332 @@
+/* FONT IMPORT */
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap");
+
+/* BASE STYLES */
+
+body {
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  color: #ffffff;
+  font-family: "Orbitron", sans-serif !important;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* SPACE THEME BACKGROUND */
+.space-bg {
+  background: url("https://www.transparenttextures.com/patterns/stardust.png") repeat;
+  background-color: #000010;
+  background-size: cover;
+  animation: panStars 180s linear infinite;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.space-bg::before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  animation: moveStars 120s linear infinite;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+@keyframes moveStars {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes panStars {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -1000px 1000px;
+  }
+}
+
+/* NAVBAR */
+.navbar {
+  box-shadow: 0 0 12px rgba(241, 194, 194, 0.1);
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  backdrop-filter: blur(1px);
+}
+
+.nav-link,
+.navbar-brand,
+.form-check-label {
+  color: #ffffff !important;
+}
+
+.navbar button {
+  background-color: #010007;
+}
+
+.nav-link:hover {
+  color: #ffd700 !important;
+}
+
+/* FOOTER  */
+footer.bg-dark {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  backdrop-filter: blur(1px);
+}
+
+input.form-control {
+  background-color: #2e3b4e;
+  color: #ffffff;
+  border: 1px solid #555;
+}
+
+/* BUTTONS  */
+.btn-primary {
+  background-color: #0077ff;
+  border-color: #0077ff;
+}
+
+.btn-primary:hover {
+  background-color: #005fcc;
+  border-color: #005fcc;
+}
+
+/* CARD STYLING  */
+.card {
+  width: 100%;
+  max-width: 340px;
+  background-color: #000000 !important;
+  border-radius: 12px;
+  border: 1px solid rgba(224, 0, 0, 0.15);
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.2);
+  margin: 1rem auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.04);
+  box-shadow: 0 0 22px rgba(0, 191, 255, 0.5);
+}
+
+.card img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #ffffff !important;
+  text-shadow: 0 0 3px rgba(255, 255, 255, 0.2);
+}
+
+.card-text {
+  font-size: 0.9rem;
+  color: #ccc;
+  opacity: 0.95;
+}
+/* RESPONSIVE CARD GRID */
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* TABLES */
+.table {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-top: 1rem;
+}
+
+.table thead {
+  backdrop-filter: blur(4px);
+}
+
+.table th,
+.table td {
+  padding: 0.75rem 1rem;
+  border-color: #444;
+  color: #ffffff !important;
+  background-color: rgba(255, 255, 255, 0.08) !important;
+}
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgb(206, 184, 184);
+}
+
+/* === HOME PAGE ANIMATIONS === */
+.glow-on-hover {
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.glow-on-hover:hover {
+  box-shadow: 0 0 15px #ffffffcc, 0 0 30px #00bfff80;
+}
+
+.scroll-indicator {
+  font-size: 1.5rem;
+  color: #bbb;
+  animation: bounce 2s infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(6px);
+  }
+}
+
+/* APOD */
+
+.apod-container {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.apod-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  text-align: left;
+}
+
+.apod-date {
+  font-size: 1rem;
+  color: #ccc;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.apod-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 18px rgba(255, 255, 255, 0.15);
+  margin: 0 auto 2rem auto;
+  display: block;
+}
+
+.apod-explanation {
+  font-size: 1rem;
+  color: #ddd;
+  text-align: justify;
+  line-height: 1.6;
+}
+
+/* MISC */
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.chart-container {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0, 191, 255, 0.3);
+}
+
+/* HOME */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fade {
+  animation: fadeIn 1.2s ease-out;
+}
+
+.animate-fade-delay {
+  animation: fadeIn 2s ease-out;
+}
+
+.animate-pop {
+  animation: popIn 1s ease-out;
+}
+
+.animate-rise {
+  animation: fadeIn 1.5s ease-out;
+}
+
+.glow-on-hover {
+  transition: box-shadow 0.3s ease-in-out;
+}
+.glow-on-hover:hover {
+  box-shadow: 0 0 15px #ffffffcc, 0 0 30px #00bfff80;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(6px);
+  }
+}

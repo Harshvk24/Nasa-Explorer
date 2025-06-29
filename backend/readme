@@ -1,0 +1,11 @@
+implemented the following NASA endpoints:
+
+/apod → Astronomy Picture of the Day
+
+/mars → Mars Rover Photos
+
+/epic → Earth Polychromatic Imaging Camera
+
+/neo → Near Earth Object feed
+
+/search → NASA Image & Video Library
