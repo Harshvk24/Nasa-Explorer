@@ -66,8 +66,8 @@ cd nasa-explorer
 
 cd backend
 npm install
-# Create a .env file and add:
-# NASA_API_KEY= your_key_here
+Create a .env file and add:
+NASA_API_KEY= your_key_here
 
 npm start
 Runs on http://localhost:5000
